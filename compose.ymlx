@@ -1,0 +1,14 @@
+services:
+  testgen-api:
+    image: soumikindocker/zebra:latest # Explicit image name
+    ports:
+      - "8000:8000"
+  qdrant:
+    image: soumikindocker/qdrant:latest # Uses a standard Docker Hub image
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+  testgen-ui:
+    image: soumikindocker/zebra-ui:latest # Explicit image name
+    ports:
+      - "8501:8501"
